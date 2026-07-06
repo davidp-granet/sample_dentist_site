@@ -73,6 +73,17 @@ nav{
     color:#1b6f87;
 }
 
+/* Hamburger */
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1b6f87;
+}
+
 /* Hero */
 
 .hero{
@@ -298,6 +309,26 @@ footer{
     text-align:center;
 }
 
+.hamburger {
+  display: block;
+}
+
+.nav-links {
+  position: absolute;
+  top: 70px;
+  right: 24px;
+  background: #fff;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+  display: none;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
 .button-row{
     justify-content:center;
 }
@@ -332,7 +363,9 @@ footer{
 Jen Doe DMD PLLC
 </div>
 
-<div class="nav-links">
+<button class="hamburger" onclick="toggleMenu()">☰</button>
+
+<div class="nav-links" id="navLinks">
 <a href="#services">Services</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
@@ -495,6 +528,12 @@ href="mailto:jendoe@something.dental">
 © 2026 Jen Doe DMD PLLC • Caring for your smile every step of the way.
 
 </footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>
