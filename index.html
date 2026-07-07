@@ -8,6 +8,8 @@
   <title>Jen Doe DMD PLLC</title>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
     * {
       margin: 0;
       padding: 0;
@@ -19,7 +21,7 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Noto Color Emoji";
       color: #2d3b43;
       background: #f8fbfd;
       line-height: 1.6;
@@ -137,6 +139,10 @@
       transition: .25s;
     }
 
+    span.phone-emoji {
+      filter: brightness(5);
+    }
+
     .primary {
       background: #1b8fb0;
       color: white;
@@ -222,6 +228,11 @@
       justify-content: center;
       align-items: center;
       font-size: 8rem;
+      text-shadow:
+        -2px -2px 0 black,
+        +2px -2px 0 black,
+        -2px +2px 0 black,
+        +2px +2px 0 black;
     }
 
     .about p {
@@ -364,7 +375,7 @@
       <div class="button-row">
 
         <a class="btn primary" href="tel:+11234567890">
-          📞 Call Now
+          <span class="phone-emoji">📞</span> Call Now
         </a>
 
         <a class="btn secondary" href="mailto:jendoe@something.dental">
@@ -474,7 +485,7 @@
         <div class="button-row">
 
           <a class="btn primary" href="tel:+11234567890">
-            📞 +1 (123) 456-7890
+            <span class="phone-emoji">📞</span> +1 (123) 456-7890
           </a>
 
           <a class="btn secondary" href="mailto:jendoe@something.dental">
