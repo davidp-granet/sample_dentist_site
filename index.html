@@ -301,6 +301,23 @@
       background: rgba(255, 255, 255, .12);
     }
 
+    iframe {
+      border: 0;
+    }
+
+    #desktop_map {
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+    }
+
+    #mobile_map {
+      display: none;
+      justify-content: center;
+      padding: 0 10px;
+      margin-top: -50px;
+    }
+
     footer {
       text-align: center;
       padding: 40px;
@@ -363,6 +380,14 @@
     @media(max-width:640px) {
       .cards {
         grid-template-columns: repeat(1, 1fr);
+      }
+
+      #mobile_map {
+        display: flex;
+      }
+
+      #desktop_map {
+        display: none;
       }
     }
   </style>
@@ -579,11 +604,33 @@
 
         </div>
 
+        <div id="desktop_map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d268.09105213047405!2d-72.9814786813477!3d40.93047749422586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e84231d637dfc5%3A0x8fadab63676d11fc!2sElena%20Friedman&#39;s%20Dental%20Office%20DDS!5e1!3m2!1sen!2sus!4v1783498618726!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+
       </div>
 
     </div>
 
   </section>
+
+  <div id="mobile_map">
+    <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d268.09105213047405!2d-72.9814786813477!3d40.93047749422586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e84231d637dfc5%3A0x8fadab63676d11fc!2sElena%20Friedman&#39;s%20Dental%20Office%20DDS!5e1!3m2!1sen!2sus!4v1783498618726!5m2!1sen!2sus"
+      width="600"
+      height="450"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+    ></iframe>
+  </div>
 
   <footer>
 
