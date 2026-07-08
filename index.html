@@ -10,6 +10,10 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
 
+    :root {
+      --teal: #1b6f87;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -60,7 +64,7 @@
     .logo {
       font-size: 1.45rem;
       font-weight: 700;
-      color: #1b6f87;
+      color: var(--teal);
     }
 
     .nav-links {
@@ -75,7 +79,7 @@
     }
 
     .nav-links a:hover {
-      color: #1b6f87;
+      color: var(--teal);
     }
 
     /* Hamburger */
@@ -86,7 +90,7 @@
       background: none;
       border: none;
       cursor: pointer;
-      color: #1b6f87;
+      color: var(--teal);
     }
 
     /* Hero */
@@ -202,7 +206,7 @@
 
     .card h3 {
       margin-bottom: 15px;
-      color: #1b6f87;
+      color: var(--teal);
       font-size: 1.25rem;
     }
 
@@ -247,7 +251,7 @@
     /* Contact */
 
     .contact {
-      background: #1b6f87;
+      background: var(--teal);
       color: white;
       border-radius: 30px;
       padding: 60px;
