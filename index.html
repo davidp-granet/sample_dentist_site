@@ -188,7 +188,7 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 28px;
     }
 
@@ -212,6 +212,25 @@
 
     .card p {
       color: #5c6b72;
+    }
+
+    #reviews .card {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 25px;
+    }
+
+    #reviews h4 {
+      margin-top: auto;
+      color: var(--teal);
+    }
+
+    .stars {
+      color: #f5a400;
+      letter-spacing: .08em;
+      font-size: 1.25rem;
+      line-height: 1;
     }
 
     /* About */
@@ -290,6 +309,12 @@
 
     /* Mobile */
 
+    @media (max-width: 1150px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media(max-width:850px) {
 
       .hero,
@@ -333,7 +358,12 @@
       .contact {
         padding: 40px 25px;
       }
+    }
 
+    @media(max-width:640px) {
+      .cards {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
   </style>
 
@@ -353,6 +383,7 @@
 
       <div class="nav-links" id="navLinks">
         <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
@@ -439,6 +470,56 @@
 
     </div>
 
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <h2>Patient Reviews</h2>
+      <div class="cards">
+
+        <!-- https://maps.app.goo.gl/dZXuLrx9EGgT6TYf8 -->
+        <div class="card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            Hands down best dentist I have ever been too! She truly cares about her patients and is very thorough. As a guy that
+            does not like going to the dentist she makes you feel very comfortable.
+            <!-- Highly recommend her! -->
+          </p>
+          <h4>Nick M.</h4>
+        </div>
+
+        <!-- https://maps.app.goo.gl/MerVLPik85Vahwx36 -->
+        <div class="card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            Very thorough dentist! My teeth look so beautiful! Dr. Friedman gave me a cleaning like I've never had before! Nice,
+            clean office too!
+            <!-- <br>Update: I needed a crown and Dr. Friedman did a perfect job..it's the best crown in my mouth! Great dentist! -->
+          </p>
+          <h4>Chrissy B.</h4>
+        </div>
+
+        <!-- https://maps.app.goo.gl/HLxRCSMNJcT5k52U7 -->
+        <div class="card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            Dr. Friedman is top notch. She is the best dentist I've ever been to. She is thorough, knowledgeable and very skilled at
+            her craft.
+          </p>
+          <h4>Paul S.</h4>
+        </div>
+
+        <!-- https://maps.app.goo.gl/v6EnpxQEC3pHTKdv8 -->
+        <div class="card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            She's a great dentist. Very clean and very thorough. She's a caring doctor with her patients, definitely recommended.
+          </p>
+          <h4>Ann Marie C.</h4>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <section id="about">
